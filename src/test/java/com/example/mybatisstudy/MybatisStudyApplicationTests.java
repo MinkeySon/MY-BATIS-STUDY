@@ -1,6 +1,6 @@
 package com.example.mybatisstudy;
 
-import com.example.mybatisstudy.mapper.UserMapper;
+import com.example.mybatisstudy.mappers.UserMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
