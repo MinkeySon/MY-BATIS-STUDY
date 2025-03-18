@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="com.example.mybatisstudy.dao.BookDao">
+
+    <select id="findMyBooks" resultType="com.example.mybatisstudy.Book">
+        SELECT b.*
+        FROM book b
+        JOIN user u ON b.user_id = u.id
+        WHERE u.name = #{userName};
+    </select>
+    <update id="rentalBooks">
+        UPDATE book
+        SET rental_status = "대여 불가능"
+        WHERE id = #{id}
+    </update>
+</mapper>
