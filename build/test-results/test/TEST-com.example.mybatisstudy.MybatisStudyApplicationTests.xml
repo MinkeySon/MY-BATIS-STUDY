@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.mybatisstudy.MybatisStudyApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-18T02:44:30.910Z" hostname="DESKTOP-3OHVLFC" time="0.326">
+<testsuite name="com.example.mybatisstudy.MybatisStudyApplicationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-18T19:47:02.058Z" hostname="sonmingiui-MacBookAir.local" time="0.305">
   <properties/>
-  <testcase name="내가 렌탈한 책 조회 Mybatis" classname="com.example.mybatisstudy.MybatisStudyApplicationTests" time="0.326"/>
+  <testcase name="내가 렌탈한 책 조회 Mybatis dto" classname="com.example.mybatisstudy.MybatisStudyApplicationTests" time="0.305"/>
   <system-out><![CDATA[
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -12,29 +12,29 @@
 
  :: Spring Boot ::                (v3.4.3)
 
-2025-03-18T11:44:27.945+09:00  INFO 21256 --- [    Test worker] c.e.m.MybatisStudyApplicationTests       : Starting MybatisStudyApplicationTests using Java 17.0.14 with PID 21256 (started by User in C:\Users\User\Desktop\spring-study\MY-BATIS-STUDY)
-2025-03-18T11:44:27.945+09:00  INFO 21256 --- [    Test worker] c.e.m.MybatisStudyApplicationTests       : No active profile set, falling back to 1 default profile: "default"
-2025-03-18T11:44:28.382+09:00  INFO 21256 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-03-18T11:44:28.414+09:00  INFO 21256 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 2 JPA repository interfaces.
-2025-03-18T11:44:28.777+09:00  INFO 21256 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-03-18T11:44:28.808+09:00  INFO 21256 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
-2025-03-18T11:44:28.840+09:00  INFO 21256 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-03-18T11:44:29.032+09:00  INFO 21256 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-03-18T11:44:29.047+09:00  INFO 21256 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-03-18T11:44:29.110+09:00  INFO 21256 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@2f99d8c
-2025-03-18T11:44:29.110+09:00  INFO 21256 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-03-18T11:44:29.159+09:00  INFO 21256 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-03-19T04:47:00.383+09:00  INFO 39002 --- [    Test worker] c.e.m.MybatisStudyApplicationTests       : Starting MybatisStudyApplicationTests using Java 17.0.8.1 with PID 39002 (started by sonmingi in /Users/sonmingi/Desktop/SpringBoot-Study/MY-BATIS-STUDY)
+2025-03-19T04:47:00.384+09:00  INFO 39002 --- [    Test worker] c.e.m.MybatisStudyApplicationTests       : No active profile set, falling back to 1 default profile: "default"
+2025-03-19T04:47:00.678+09:00  INFO 39002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-03-19T04:47:00.695+09:00  INFO 39002 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13 ms. Found 2 JPA repository interfaces.
+2025-03-19T04:47:00.870+09:00  INFO 39002 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-03-19T04:47:00.900+09:00  INFO 39002 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.8.Final
+2025-03-19T04:47:00.921+09:00  INFO 39002 --- [    Test worker] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-03-19T04:47:01.065+09:00  INFO 39002 --- [    Test worker] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-03-19T04:47:01.080+09:00  INFO 39002 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-03-19T04:47:01.149+09:00  INFO 39002 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.mariadb.jdbc.Connection@74764622
+2025-03-19T04:47:01.150+09:00  INFO 39002 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-03-19T04:47:01.185+09:00  INFO 39002 --- [    Test worker] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
-	Database version: 11.4.4
+	Database version: 11.5.2
 	Autocommit mode: undefined/unknown
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-03-18T11:44:29.643+09:00  INFO 21256 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-03-18T11:44:29.677+09:00  INFO 21256 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-03-18T11:44:29.803+09:00  WARN 21256 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-03-18T11:44:30.866+09:00  INFO 21256 --- [    Test worker] c.e.m.MybatisStudyApplicationTests       : Started MybatisStudyApplicationTests in 3.094 seconds (process running for 3.788)
+2025-03-19T04:47:01.533+09:00  INFO 39002 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-03-19T04:47:01.573+09:00  INFO 39002 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-03-19T04:47:01.656+09:00  WARN 39002 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-03-19T04:47:02.050+09:00  INFO 39002 --- [    Test worker] c.e.m.MybatisStudyApplicationTests       : Started MybatisStudyApplicationTests in 1.778 seconds (process running for 2.23)
 title
 test1
 title

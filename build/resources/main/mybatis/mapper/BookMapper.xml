@@ -14,4 +14,10 @@
         SET rental_status = "대여 불가능"
         WHERE id = #{id}
     </update>
+    <select id="findAllMyBooks"  resultType="com.example.mybatisstudy.Book">
+        SELECT b.*
+        FROM book b
+        JOIN user u ON b.user_id = u.id
+        WHERE u.name = #{user.name};
+    </select>
 </mapper>

@@ -2,6 +2,7 @@ package com.example.mybatisstudy;
 
 import com.example.mybatisstudy.dao.BookDao;
 import com.example.mybatisstudy.dao.UserDao;
+import com.example.mybatisstudy.dto.Dto;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +27,7 @@ class MybatisStudyApplicationTests {
     @Test
     @DisplayName("User 생성")
     void createUser() {
-        for(int i=1; i<=10_000; i++){
+        for(int i=1; i<=1000; i++){
             userRepository.save(new User("test"+i, i % 20, "test@"+i+"co.kr"));
         }
     }
@@ -113,6 +114,20 @@ class MybatisStudyApplicationTests {
     void getRentalBooksMybatis(){
         User user = userDao.findById((long)1);
         List<Book> bookList = bookDao.findMyBooks(user.getName());
+
+        bookList.stream().forEach(book -> {
+            System.out.println(book.getTitle());
+            System.out.println(user.getName());
+        });
+    }
+    @Test
+    @DisplayName("내가 렌탈한 책 조회 Mybatis dto")
+    void getRentalBooksMybatisDto(){
+        User user = userDao.findById((long)1);
+        Dto dto = new Dto();
+        dto.setUser(user);
+
+        List<Book> bookList = bookDao.findAllMyBooks(dto);
 
         bookList.stream().forEach(book -> {
             System.out.println(book.getTitle());
